@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-accent: #00E5FF;
+  --color-accent-dim: #00E5FF20;
+  --color-background: #0B0F14;
+  --color-surface: #151A21;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --animate-float: float 6s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+:root {
+  background-color: var(--color-background);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  /* Offset for fixed navbar */
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(11, 15, 20, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .glass-card {
+    background: rgba(21, 26, 33, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}

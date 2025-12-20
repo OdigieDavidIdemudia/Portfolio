@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cybersecurity analyst and software developer designing secure systems and general-purpose applications">
+    <meta name="author" content="David Idemudia Odigie">
+    <title>David Idemudia Odigie | Cybersecurity Analyst & Software Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Fixed Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="logo.png" alt="Portfolio Logo" class="brand-logo">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#capabilities" class="nav-link">Capabilities</a></li>
+                <li><a href="#stack" class="nav-link">Stack</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#process" class="nav-link">Process</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <canvas id="networkCanvas" class="network-canvas"></canvas>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 class="hero-headline">David Idemudia Odigie</h1>
+            <p class="hero-subtitle">Cybersecurity Analyst & Software Developer</p>
+            <p class="hero-subheadline">I analyze security risks and design software solutions — from threat-aware tools
+                to general-purpose applications</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="/assets/David_Idemudia_Odigie_CV.pdf" class="btn btn-secondary" download>Download CV</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Capabilities Section -->
+    <section id="capabilities" class="section">
+        <div class="container">
+            <h2 class="section-title">What I Do</h2>
+            <div class="split-cards">
+                <div class="capability-card glass-card">
+                    <div class="card-header">
+                        <div class="card-icon">🛡️</div>
+                        <h3>Cybersecurity</h3>
+                    </div>
+                    <p class="card-description">Protecting systems through monitoring, analysis, and structured response
+                    </p>
+                    <ul class="capability-list">
+                        <li>SOC Monitoring & Alert Triage</li>
+                        <li>Incident Response & Root Cause Analysis</li>
+                        <li>Threat Intelligence & Indicator Analysis</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>NIST CSF & ISMS Alignment</li>
+                    </ul>
+                </div>
+                <div class="capability-card glass-card">
+                    <div class="card-header">
+                        <div class="card-icon">💻</div>
+                        <h3>Software Development</h3>
+                    </div>
+                    <p class="card-description">Designing and building software to solve operational and business
+                        problems</p>
+                    <ul class="capability-list">
+                        <li>Application Design & Development</li>
+                        <li>Python & C# Development</li>
+                        <li>Automation & Scripting</li>
+                        <li>API Design & Integration</li>
+                        <li>Data Processing & Logic Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack Section -->
+    <section id="stack" class="section">
+        <div class="container">
+            <h2 class="section-title">Tools & Stack</h2>
+            <div class="stack-grid">
+                <div class="stack-group glass-card">
+                    <h3 class="stack-category">Security</h3>
+                    <div class="stack-items">
+                        <span class="stack-item">SIEM Platforms</span>
+                        <span class="stack-item">Threat Intelligence Feeds</span>
+                        <span class="stack-item">Log Analysis</span>
+                        <span class="stack-item">NIST Cybersecurity Framework</span>
+                        <span class="stack-item">ISMS</span>
+                    </div>
+                </div>
+                <div class="stack-group glass-card">
+                    <h3 class="stack-category">Development</h3>
+                    <div class="stack-items">
+                        <span class="stack-item">Python</span>
+                        <span class="stack-item">C#</span>
+                        <span class="stack-item">REST APIs</span>
+                        <span class="stack-item">JSON</span>
+                        <span class="stack-item">Git</span>
+                    </div>
+                </div>
+                <div class="stack-group glass-card">
+                    <h3 class="stack-category">Systems & Infrastructure</h3>
+                    <div class="stack-items">
+                        <span class="stack-item">Windows Server</span>
+                        <span class="stack-item">Linux</span>
+                        <span class="stack-item">Networking</span>
+                        <span class="stack-item">Virtualization</span>
+                    </div>
+                </div>
+                <div class="stack-group glass-card">
+                    <h3 class="stack-category">General Software Design</h3>
+                    <div class="stack-items">
+                        <span class="stack-item">Application Architecture</span>
+                        <span class="stack-item">Data Models</span>
+                        <span class="stack-item">UI Logic</span>
+                        <span class="stack-item">Workflow Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Tools & Platforms Section -->
+    <section id="security-tools" class="section section-dark">
+        <div class="container">
+            <h2 class="section-title">Security Tools & Platforms</h2>
+            <p class="section-description">Hands-on experience operating and monitoring enterprise security platforms in
+                a SOC environment</p>
+
+            <!-- SIEM & XDR Group -->
+            <div class="tools-category">
+                <h3 class="category-title">SIEM & XDR</h3>
+                <div class="tools-group">
+                    <div class="tool-card glass-card">
+                        <img src="tools/qradar.png" alt="IBM QRadar" class="tool-logo">
+                        <p class="tool-name">IBM QRadar</p>
+                        <p class="tool-capability">SIEM monitoring & correlation</p>
+                    </div>
+                    <div class="tool-card glass-card">
+                        <img src="tools/wazuh.png" alt="Wazuh" class="tool-logo">
+                        <p class="tool-name">Wazuh</p>
+                        <p class="tool-capability">Host-based detection & alerts</p>
+                    </div>
+                    <div class="tool-card glass-card">
+                        <img src="tools/cortex.png" alt="Cortex XDR" class="tool-logo">
+                        <p class="tool-name">Cortex XDR</p>
+                        <p class="tool-capability">Endpoint detection & response</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Network & Access Control Group -->
+            <div class="tools-category">
+                <h3 class="category-title">Network & Access Control</h3>
+                <div class="tools-group">
+                    <div class="tool-card glass-card">
+                        <img src="tools/forescout.png" alt="Forescout NAC" class="tool-logo">
+                        <p class="tool-name">Forescout NAC</p>
+                        <p class="tool-capability">Network access visibility</p>
+                    </div>
+                    <div class="tool-card glass-card">
+                        <img src="tools/algosec.png" alt="AlgoSec" class="tool-logo">
+                        <p class="tool-name">AlgoSec</p>
+                        <p class="tool-capability">Network security policy analysis</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Data & Application Security Group -->
+            <div class="tools-category">
+                <h3 class="category-title">Data & Application Security</h3>
+                <div class="tools-group">
+                    <div class="tool-card glass-card">
+                        <img src="tools/forcepoint.png" alt="Forcepoint DLP" class="tool-logo">
+                        <p class="tool-name">Forcepoint DLP</p>
+                        <p class="tool-capability">Data loss prevention</p>
+                    </div>
+                    <div class="tool-card glass-card">
+                        <img src="tools/imperva.png" alt="Imperva WAF" class="tool-logo">
+                        <p class="tool-name">Imperva WAF</p>
+                        <p class="tool-capability">Web application protection</p>
+                    </div>
+                    <div class="tool-card glass-card">
+                        <img src="tools/checkpoint.png" alt="Checkpoint Email Security" class="tool-logo">
+                        <p class="tool-name">Checkpoint Email Security</p>
+                        <p class="tool-capability">Email threat protection</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integrity & Monitoring Group -->
+            <div class="tools-category">
+                <h3 class="category-title">Integrity & Monitoring</h3>
+                <div class="tools-group">
+                    <div class="tool-card glass-card">
+                        <img src="tools/cimtrak.png" alt="CimTrak FIM" class="tool-logo">
+                        <p class="tool-name">CimTrak FIM</p>
+                        <p class="tool-capability">File integrity monitoring</p>
+                    </div>
+                    <div class="tool-card glass-card">
+                        <img src="tools/nnt.png" alt="NNT" class="tool-logo">
+                        <p class="tool-name">NNT</p>
+                        <p class="tool-capability">Network traffic monitoring</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+        <div class="container">
+            <h2 class="section-title">Certifications & Professional Training</h2>
+            <p class="section-description">Recognized certifications supporting my cybersecurity and engineering
+                expertise</p>
+            <div class="certifications-grid">
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <div class="cert-icon">🎓</div>
+                    </div>
+                    <h3 class="cert-name">ISC2 Certified in Cybersecurity (CC)</h3>
+                    <p class="cert-issuer">ISC2</p>
+                    <p class="cert-focus">Security Principles, Risk, and Governance</p>
+                    <span class="cert-status">Completed</span>
+                </div>
+
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <div class="cert-icon">🔒</div>
+                    </div>
+                    <h3 class="cert-name">NSE 1 Network Security Associate</h3>
+                    <p class="cert-issuer">Fortinet</p>
+                    <p class="cert-focus">Network Security Fundamentals</p>
+                    <span class="cert-status">Completed</span>
+                </div>
+
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <div class="cert-icon">🛡️</div>
+                    </div>
+                    <h3 class="cert-name">NSE 2 Security Awareness</h3>
+                    <p class="cert-issuer">Fortinet</p>
+                    <p class="cert-focus">Threats, Attacks, and Security Concepts</p>
+                    <span class="cert-status">Completed</span>
+                </div>
+
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <div class="cert-icon">🔐</div>
+                    </div>
+                    <h3 class="cert-name">NSE 3 Network Security Associate</h3>
+                    <p class="cert-issuer">Fortinet</p>
+                    <p class="cert-focus">Firewall & Network Security</p>
+                    <span class="cert-status">Completed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="projects-grid">
+                <!-- OrangeIntel -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <span class="project-category">Cybersecurity</span>
+                        <h3 class="project-name">OrangeIntel</h3>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>Problem</h4>
+                            <p>Threat intelligence sources were fragmented, slowing down SOC analysis.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Solution</h4>
+                            <p>Premium Threat Intelligence Assessment (TIA) platform aggregating feeds and automating
+                                analysis.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Outcome</h4>
+                            <p>Improved visibility and reduced manual analysis effort.</p>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">Electron</span>
+                        <span class="tech-tag">SQLite</span>
+                    </div>
+                </div>
+
+                <!-- Asset Comparator 2.0 -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <span class="project-category">Cybersecurity</span>
+                        <h3 class="project-name">Hash & IP Comparator</h3>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>Problem</h4>
+                            <p>Manual comparison of indicators across datasets was error-prone.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Solution</h4>
+                            <p>Desktop application comparing lists to highlight common and unique indicators with export
+                                capabilities.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Outcome</h4>
+                            <p>Faster indicator correlation and cleaner reporting.</p>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">Data Parsing</span>
+                    </div>
+                </div>
+
+                <!-- SyncDeck -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <span class="project-category">General Software</span>
+                        <h3 class="project-name">SyncDeck</h3>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>Problem</h4>
+                            <p>Existing task tools were too heavy for lightweight operational tracking.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Solution</h4>
+                            <p>Modern task management dashboard focused on clarity, speed, and multi-assignee workflows.
+                            </p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Outcome</h4>
+                            <p>Improved task visibility and operational discipline.</p>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- SepX -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <span class="project-category">Development</span>
+                        <h3 class="project-name">SepX</h3>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>Problem</h4>
+                            <p>Formatting lists of tokens for SIEM queries was repetitive and tedious.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Solution</h4>
+                            <p>Powerful separator tool with GUI to instantly delimit text with custom characters.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Outcome</h4>
+                            <p>Fast data preparation for security queries.</p>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Tkinter</span>
+                        <span class="tech-tag">PyInstaller</span>
+                    </div>
+                </div>
+
+                <!-- GT HostSplit -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <span class="project-category">Systems</span>
+                        <h3 class="project-name">GT HostSplit</h3>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>Problem</h4>
+                            <p>Managing mixed lists of hostnames and IPs created inventory confusion.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Solution</h4>
+                            <p>Intelligent splitter that categorizes hosts into "Paired", "Hostname Only", and "IP Only"
+                                groups.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Outcome</h4>
+                            <p>Clean, actionable inventory lists for auditing.</p>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Data Processing</span>
+                    </div>
+                </div>
+
+                <!-- GT Server IP Comparator -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <span class="project-category">Systems</span>
+                        <h3 class="project-name">GT Server IP Comparator</h3>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>Problem</h4>
+                            <p>Verifying server onboarding status against master lists was slow and manual.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Solution</h4>
+                            <p>Bulk validation tool comparing Excel inventories against reference lists with automated
+                                reporting.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Outcome</h4>
+                            <p>100% accurate onboarding verification.</p>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Excel</span>
+                    </div>
+                </div>
+
+                <!-- Domain Admission Review -->
+                <div class="project-card glass-card">
+                    <div class="project-header">
+                        <span class="project-category">Compliance</span>
+                        <h3 class="project-name">Domain Admission Review</h3>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-section">
+                            <h4>Problem</h4>
+                            <p>Manual auditing of domain joins versus inventory was time-consuming.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Solution</h4>
+                            <p>Automated engine correlating system logs with host inventories to generate audit
+                                evidence.</p>
+                        </div>
+                        <div class="project-section">
+                            <h4>Outcome</h4>
+                            <p>Automated, compliant audit reports.</p>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Docx</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section">
+        <div class="container">
+            <h2 class="section-title">How I Approach Problems</h2>
+            <div class="process-flow">
+                <div class="process-step glass-card">
+                    <div class="step-number">01</div>
+                    <h3>Problem or Threat Identified</h3>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step glass-card">
+                    <div class="step-number">02</div>
+                    <h3>Context & Impact Analysis</h3>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step glass-card">
+                    <div class="step-number">03</div>
+                    <h3>Design of Software or Controls</h3>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step glass-card">
+                    <div class="step-number">04</div>
+                    <h3>Implementation & Testing</h3>
+                </div>
+                <div class="process-arrow">→</div>
+                <div class="process-step glass-card">
+                    <div class="step-number">05</div>
+                    <h3>Review, Reporting & Improvement</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-content glass-card">
+                <h2 class="contact-headline">Open to Cybersecurity & Software Engineering Roles</h2>
+                <p class="contact-description">Remote / Open to Opportunities</p>
+                <div class="contact-info">
+                    <a href="mailto:David.odigie.ide@gmail.com" class="contact-email">David.odigie.ide@gmail.com</a>
+                    <div class="contact-links">
+                        <a href="https://github.com/yourusername" target="_blank" class="contact-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-link">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Cybersecurity Analyst & Software Developer. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
