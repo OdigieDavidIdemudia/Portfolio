@@ -83,7 +83,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden glass border-t border-white/5 overflow-hidden"
+                        className="md:hidden absolute top-full left-0 w-full bg-[#0b0f14]/95 backdrop-blur-xl border-b border-white/10 overflow-hidden"
                     >
                         <div className="container mx-auto px-6 py-4 flex flex-col space-y-4">
                             {navItems.map((item) => (
