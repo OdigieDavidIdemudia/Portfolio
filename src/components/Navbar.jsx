@@ -40,7 +40,7 @@ export default function Navbar() {
                         ))}
 
                         <motion.a
-                            href="/assets/David_Idemudia_Odigie_CV.pdf"
+                            href={`${import.meta.env.BASE_URL}assets/David_Idemudia_Odigie_CV.pdf`}
                             download
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}

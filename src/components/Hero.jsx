@@ -61,7 +61,7 @@ export default function Hero() {
                                 View Works
                             </a>
                             <a
-                                href="/assets/David_Idemudia_Odigie_CV.pdf"
+                                href={`${import.meta.env.BASE_URL}assets/David_Idemudia_Odigie_CV.pdf`}
                                 download
                                 className="px-8 py-3 bg-white/5 border border-white/10 text-white hover:bg-white/10 rounded-full transition-all duration-300 backdrop-blur-sm flex items-center gap-2"
                             >
