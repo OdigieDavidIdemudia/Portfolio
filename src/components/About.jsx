@@ -30,7 +30,7 @@ export default function About() {
                         className="w-full md:w-1/2"
                     >
                         <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                            Who is <span className="text-accent">David?</span>
+                            Who is <span className="text-accent">Idemudia?</span>
                         </h2>
 
                         <div className="space-y-6 text-gray-300 leading-relaxed">

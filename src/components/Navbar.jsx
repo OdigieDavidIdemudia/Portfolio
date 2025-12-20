@@ -21,7 +21,7 @@ export default function Navbar() {
                         animate={{ opacity: 1, x: 0 }}
                         className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
                     >
-                        DO
+                        DIO
                     </motion.div>
 
                     {/* Desktop Menu */}

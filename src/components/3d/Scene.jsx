@@ -21,7 +21,7 @@ function Globe() {
     return (
         <group rotation={[0, 0, Math.PI / 6]}>
             {/* Main Wireframe Globe */}
-            <Sphere ref={meshRef} args={[10, 64, 64]} scale={1.8}>
+            <Sphere ref={meshRef} args={[10, 64, 64]} scale={1.5}>
                 <meshBasicMaterial
                     color="#00E5FF"
                     wireframe
@@ -31,7 +31,7 @@ function Globe() {
             </Sphere>
 
             {/* Inner Globe Glow */}
-            <Sphere args={[9.8, 64, 64]} scale={1.8}>
+            <Sphere args={[9.8, 64, 64]} scale={1.5}>
                 <meshBasicMaterial
                     color="#0B0F14"
                 />

@@ -2,16 +2,16 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { motion } from 'framer-motion';
 import { Download, ChevronsDown } from 'lucide-react';
-import Scene from './3d/Scene';
+import NetworkScene from './3d/NetworkScene';
 
 export default function Hero() {
     return (
         <section id="home" className="relative w-full h-screen overflow-hidden bg-background">
             {/* 3D Background */}
             <div className="absolute inset-0 z-0">
-                <Canvas camera={{ position: [0, 0, 35], fov: 60 }}>
+                <Canvas camera={{ position: [0, 0, 30], fov: 60 }}>
                     <Suspense fallback={null}>
-                        <Scene />
+                        <NetworkScene />
                     </Suspense>
                 </Canvas>
             </div>
@@ -75,7 +75,7 @@ export default function Hero() {
 
             {/* Scroll Indicator */}
             <motion.div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center cursor-pointer group"
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center cursor-pointer group bg-black/40 backdrop-blur-md rounded-full px-4 py-2"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 1 }}
