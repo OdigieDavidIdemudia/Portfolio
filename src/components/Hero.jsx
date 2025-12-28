@@ -8,7 +8,7 @@ export default function Hero() {
     return (
         <section id="home" className="relative w-full h-screen overflow-hidden bg-background">
             {/* 3D Background */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 opacity-70">
                 <Canvas camera={{ position: [0, 0, 30], fov: 60 }}>
                     <Suspense fallback={null}>
                         <NetworkScene />
@@ -24,46 +24,38 @@ export default function Hero() {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight">
-                            <span className="bg-gradient-to-b from-white to-gray-400 bg-clip-text text-transparent">
-                                David Idemudia
-                            </span>
-                            <br />
-                            <span className="text-accent relative inline-block">
-                                Odigie
-                                <motion.span
-                                    className="absolute -bottom-2 left-0 w-full h-1 bg-accent/50 rounded-full blur-sm"
-                                    initial={{ scaleX: 0 }}
-                                    animate={{ scaleX: 1 }}
-                                    transition={{ delay: 0.5, duration: 0.8 }}
-                                />
-                            </span>
+                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 tracking-tight text-white">
+                            David <span className="text-accent font-mono inline-block hover:scale-105 transition-transform duration-300" style={{ textShadow: "0 0 20px rgba(0, 229, 255, 0.5)" }}>Idemudia</span> Odigie
                         </h1>
 
-                        <h2 className="text-2xl md:text-3xl text-gray-300 font-medium mb-4">
-                            Cybersecurity Analyst & Software Developer
+                        <h2 className="text-xl md:text-2xl text-gray-200 font-bold mb-4 tracking-wide">
+                            Security Engineer <span className="text-accent">|</span> Detection, Automation, and Infrastructure Security
                         </h2>
 
-                        <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                            I build and secure systems — from security tooling to production-grade software.
+                        <p className="text-xs md:text-sm text-gray-500 mb-6 font-medium uppercase tracking-widest max-w-2xl mx-auto">
+                            Focused on SOC tooling, detection engineering, and secure systems design
+                        </p>
+
+                        <p className="text-base md:text-lg text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                            I design, secure, and automate systems that support detection, resilience, and operational visibility in modern environments.
                         </p>
 
                         <motion.div
-                            className="flex items-center justify-center space-x-6"
+                            className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.8 }}
                         >
                             <a
                                 href="#projects"
-                                className="px-8 py-3 bg-accent text-background font-bold rounded-full hover:bg-accent/90 transition-all duration-300"
+                                className="px-8 py-3 bg-accent text-background font-bold rounded-full hover:bg-accent/90 transition-all duration-300 shadow-lg shadow-accent/20"
                             >
-                                View Works
+                                View Security Work
                             </a>
                             <a
                                 href={`${import.meta.env.BASE_URL}assets/David_Idemudia_Odigie_CV.pdf`}
                                 download
-                                className="px-8 py-3 bg-white/5 border border-white/10 text-white hover:bg-white/10 rounded-full transition-all duration-300 backdrop-blur-sm flex items-center gap-2"
+                                className="px-8 py-3 bg-transparent border border-gray-700 text-gray-300 hover:text-white hover:border-gray-500 rounded-full transition-all duration-300 flex items-center gap-2"
                             >
                                 <Download size={20} />
                                 Download CV
@@ -75,29 +67,30 @@ export default function Hero() {
 
             {/* Scroll Indicator */}
             <motion.div
-                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center cursor-pointer group"
+                className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center cursor-pointer group"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 1 }}
                 onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
             >
-                <motion.div
-                    animate={{ y: [0, 8, 0] }}
-                    transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "easeInOut"
-                    }}
-                    className="flex flex-col items-center"
-                >
-                    <span className="text-[10px] tracking-[0.3em] text-white/40 font-light mb-2 group-hover:text-accent transition-colors duration-300 uppercase">
-                        Scroll Down
+                <div className="flex flex-col items-center gap-2">
+                    <span className="text-xs font-semibold tracking-[0.2em] text-gray-500 group-hover:text-accent transition-colors duration-300 uppercase">
+                        Explore Capabilities
                     </span>
-                    <ChevronsDown
-                        size={24}
-                        className="text-white/40 group-hover:text-accent transition-colors duration-300"
-                    />
-                </motion.div>
+                    <motion.div
+                        animate={{ y: [0, 5, 0] }}
+                        transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            ease: "easeInOut"
+                        }}
+                    >
+                        <ChevronsDown
+                            size={20}
+                            className="text-gray-600 group-hover:text-accent transition-colors duration-300"
+                        />
+                    </motion.div>
+                </div>
             </motion.div>
         </section>
     );

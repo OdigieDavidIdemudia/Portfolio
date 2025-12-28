@@ -25,8 +25,8 @@ export default function BootTerminal({ onComplete }) {
     // Auto-skip capability
     useEffect(() => {
         const timer = setTimeout(() => {
-            handleSkip();
-        }, 4000); // per config: autoSkipMs 4000
+            // handleSkip(); // Only skip on click, or very long timeout
+        }, 15000);
         return () => clearTimeout(timer);
     }, []);
 
@@ -52,7 +52,7 @@ export default function BootTerminal({ onComplete }) {
                     return newLines;
                 });
                 setCurrentCharIndex(prev => prev + 1);
-            }, 20); // Fast typing
+            }, 35);
             return () => clearTimeout(timeout);
         } else {
             // Line finished

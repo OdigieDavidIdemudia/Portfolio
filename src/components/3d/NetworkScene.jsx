@@ -2,7 +2,7 @@ import React, { useMemo, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const NODE_COUNT = 80;
+const NODE_COUNT = 50;
 const RADIUS = 15;
 const CONNECTION_DISTANCE = 5;
 

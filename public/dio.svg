@@ -4,6 +4,17 @@
       <stop offset="0%" style="stop-color:white;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:1" />
     </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
   </defs>
-  <text x="50" y="65" font-family="Arial, sans-serif" font-weight="bold" font-size="60" text-anchor="middle" fill="url(#grad)">DIO</text>
+  <text x="50" y="65" font-family="Arial, sans-serif" font-weight="bold" font-size="60" text-anchor="middle">
+    <tspan fill="white">D</tspan>
+    <tspan fill="#00E5FF" font-family="monospace" filter="url(#glow)">I</tspan>
+    <tspan fill="#9ca3af">O</tspan>
+  </text>
 </svg>

@@ -1,30 +1,45 @@
 import {
-    Code2,
+    Layout,
     Server,
     Shield,
-    Terminal,
-    Layout
+    Terminal
 } from 'lucide-react';
 
 export const skillCategories = [
     {
-        title: "Frontend Development",
+        id: "frontend",
+        title: "Frontend Systems & UX Engineering",
+        subtitle: "High-performance, accessible interfaces",
         icon: Layout,
-        skills: ["React", "Vue.js", "TailwindCSS", "Framer Motion", "Three.js"]
+        primarySkills: ["React", "Vue.js"],
+        secondarySkills: ["TailwindCSS", "Framer Motion"],
+        supportingSkills: ["Three.js"]
     },
     {
-        title: "Backend & Systems",
+        id: "backend",
+        title: "Backend Architecture & APIs",
+        subtitle: "Scalable services and data contracts",
         icon: Server,
-        skills: ["Node.js", "Python", "Go", "C#/.NET", "REST APIs", "GraphQL"]
+        primarySkills: ["Node.js", "C#/.NET"],
+        secondarySkills: ["Python", "Go"],
+        supportingSkills: ["REST APIs", "GraphQL"]
     },
     {
-        title: "Cybersecurity",
+        id: "security",
+        title: "Cybersecurity & Risk Engineering",
+        subtitle: "Detection, response, and threat mitigation",
         icon: Shield,
-        skills: ["Threat Intelligence", "SIEM", "Network Security", "Forensics"]
+        primarySkills: ["SIEM", "Network Security"],
+        secondarySkills: ["Threat Intelligence"],
+        supportingSkills: ["Forensics"]
     },
     {
-        title: "Tools & DevOps",
+        id: "devops",
+        title: "Tooling, Automation & DevOps",
+        subtitle: "Operational reliability and visibility",
         icon: Terminal,
-        skills: ["Git", "Docker", "Linux", "Wireshark", "Burp Suite"]
+        primarySkills: ["Docker", "Linux"],
+        secondarySkills: ["Git"],
+        supportingSkills: ["Wireshark", "Burp Suite"]
     }
 ];

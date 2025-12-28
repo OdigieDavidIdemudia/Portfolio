@@ -23,7 +23,7 @@ export default function Contact() {
         {
             name: 'GitHub',
             icon: Github,
-            link: 'https://github.com/davidthings',
+            link: 'https://github.com/OdigieDavidIdemudia',
             color: 'hover:text-gray-100',
             bgColor: 'hover:bg-gray-100/10',
             borderColor: 'hover:border-gray-100/20'

@@ -1,53 +1,40 @@
-import { Shield, Server, Database, Lock, Globe, Terminal } from 'lucide-react';
+import { Shield, LayoutDashboard, Terminal, Globe } from 'lucide-react';
 
 export const projects = [
     {
+        id: "orangeintel",
         title: "OrangeIntel",
-        description: "A comprehensive Threat Advisory Platform for monitoring and analyzing cybersecurity threats.",
-        tags: ["React", "Go Lang", "Threat Intelligence"],
-        icon: Shield,
-        links: { github: "#", live: "#" }
-    },
-    {
-        title: "SyncDeck",
-        description: "Operational Task Manager designed to streamline team workflows and task tracking.",
-        tags: ["Vue.js", "Firebase", "Productivity"],
-        icon: Database,
-        links: { github: "#", live: "#" }
-    },
-    {
-        title: "Hash & IP Comparator",
-        description: "Utility tool for comparing large sets of cryptographic hashes and IP addresses for IOC matches.",
-        tags: ["Python", "Tkinter", "Forensics"],
-        icon: Terminal,
-        links: { github: "#", live: "#" }
-    },
-    {
-        title: "SepX",
-        description: "Secure file separation and classification tool for enterprise environments.",
-        tags: ["Python", ".NET", "Security"],
-        icon: Lock,
-        links: { github: "#", live: "#" }
-    },
-    {
-        title: "HostSplit",
-        description: "Network utilities for parsing and splitting hostnames and domains efficiently.",
-        tags: ["Python", "Networking", "Automation"],
-        icon: Server,
-        links: { github: "#", live: "#" }
-    },
-    {
-        title: "Server IP Comparator",
-        description: "Advanced IP comparison tool for server infrastructure analysis.",
-        tags: ["Python", "Networking"],
+        impactStatement: "Threat intelligence platform for real-time adversary monitoring and analysis",
+        problemSolved: "Fragmented threat feeds and slow analyst triage",
+        outcome: "Centralized threat visibility and faster response workflows",
+        techStack: ["React", "Go"],
+        domain: "Threat Intelligence",
+        cta: "View Architecture",
         icon: Globe,
         links: { github: "#", live: "#" }
     },
     {
-        title: "Domain Admission Review",
-        description: "Automated system for reviewing and validating domain admission requests.",
-        tags: ["JavaScript", "Automation"],
-        icon: Shield,
-        links: { github: "#", live: "#" }
+        id: "syncdeck",
+        title: "SyncDeck",
+        impactStatement: "Operational task system improving team execution velocity",
+        problemSolved: "Poor task visibility across distributed teams",
+        outcome: "Clear ownership, reduced coordination overhead",
+        techStack: ["Vue.js", "Firebase"],
+        domain: "Productivity Systems",
+        cta: "View Case Study",
+        icon: LayoutDashboard,
+        links: { github: "https://github.com/OdigieDavidIdemudia/SyncDeck", live: "https://sync-deck.vercel.app/" }
+    },
+    {
+        id: "socti",
+        title: "SOCTI Toolkit",
+        impactStatement: "Modular SOC toolkit for asset validation and threat reputation analysis",
+        problemSolved: "Manual, error-prone SOC enrichment workflows",
+        outcome: "Faster analyst validation with repeatable tooling",
+        techStack: ["Python", "Pandas"],
+        domain: "SOC Operations",
+        cta: "Explore Toolkit",
+        icon: Terminal,
+        links: { github: "https://github.com/OdigieDavidIdemudia/SOCTI-Toolkit", live: "#" }
     }
 ];

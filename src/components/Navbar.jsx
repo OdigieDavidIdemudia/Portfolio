@@ -19,9 +19,11 @@ export default function Navbar() {
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
-                        className="text-2xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent"
+                        className="text-2xl font-bold text-white flex gap-[1px]"
                     >
-                        DIO
+                        <span>D</span>
+                        <span className="text-accent font-mono" style={{ textShadow: "0 0 10px rgba(0, 229, 255, 0.5)" }}>I</span>
+                        <span>O</span>
                     </motion.div>
 
                     {/* Desktop Menu */}
@@ -55,7 +57,7 @@ export default function Navbar() {
                             transition={{ delay: 0.5 }}
                             className="flex items-center space-x-4 pl-4 border-l border-white/10"
                         >
-                            <a href="https://github.com/davidthings" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                            <a href="https://github.com/OdigieDavidIdemudia" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                 <Github size={20} />
                             </a>
                             <a href="https://linkedin.com/in/david-odigie" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
@@ -100,6 +102,6 @@ export default function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+        </nav >
     );
 }
