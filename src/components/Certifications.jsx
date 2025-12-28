@@ -17,6 +17,9 @@ export default function Certifications() {
                         Licenses & <span className="text-accent">Certifications</span>
                     </h2>
                     <div className="w-24 h-1 bg-accent rounded-full mx-auto" />
+                    <p className="mt-6 text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                        Continuous validation of competencies across network security, threat management, and operational defense.
+                    </p>
                 </motion.div>
 
                 <div className="space-y-16">
