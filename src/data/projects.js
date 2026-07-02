@@ -1,6 +1,34 @@
-import { Shield, LayoutDashboard, Terminal, Globe } from 'lucide-react';
+import { Shield, LayoutDashboard, Terminal, Globe, Bot, ClipboardList } from 'lucide-react';
 
 export const projects = [
+    {
+        id: "rolehunter",
+        title: "RoleHunter",
+        impactStatement: "AI-powered job hunting automation platform that autonomously scans job boards, scores listings against your CV, and sends personalised pitch emails — all on autopilot",
+        problemSolved: "Manual job searching is time-consuming and inconsistent — candidates miss opportunities and craft generic applications",
+        outcome: "End-to-end AI pipeline from RSS scraping to email outreach, reducing job application effort to near zero",
+        techStack: ["FastAPI", "Python", "Google Gemini", "PostgreSQL", "SQLAlchemy", "JWT"],
+        domain: "AI Automation",
+        cta: "View Live App",
+        status: "Live",
+        year: 2025,
+        icon: Bot,
+        links: { github: "https://github.com/OdigieDavidIdemudia/RoleHunter", live: "https://rolehunter.vercel.app" }
+    },
+    {
+        id: "dailybrief",
+        title: "Daily BRIEF",
+        impactStatement: "Minimalist daily task logger and automated export engine built for teams requiring structured daily logging with multi-user access control and AI-assisted handover documentation",
+        problemSolved: "Teams lacked a structured, audit-ready way to log daily operations and hand over work across shifts",
+        outcome: "Streamlined daily reporting with AI-generated handovers, PDF/CSV/XLSX exports, and Telegram push notifications",
+        techStack: ["FastAPI", "Python", "Google Gemini", "PostgreSQL", "Tailwind CSS", "Telegram Bot API"],
+        domain: "Productivity Systems",
+        cta: "View Live App",
+        status: "Production",
+        year: 2026,
+        icon: ClipboardList,
+        links: { github: "#", live: "https://daily-brief-ten-delta.vercel.app" }
+    },
     {
         id: "orangeintel",
         title: "OrangeIntel",
