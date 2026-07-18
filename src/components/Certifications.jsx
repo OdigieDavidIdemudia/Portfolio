@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Award, CheckCircle2 } from 'lucide-react';
+import { ShieldCheck, Award, CheckCircle2, Clock } from 'lucide-react';
 import { certificationGroups } from '../data/certifications';
 
 export default function Certifications() {
@@ -53,8 +53,12 @@ export default function Certifications() {
                                                     {cert.issuer}
                                                 </span>
                                             </div>
-                                            <div className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-[10px] font-medium uppercase tracking-wide">
-                                                <CheckCircle2 size={10} />
+                                            <div className={`flex items-center gap-1.5 px-2 py-1 rounded-full text-[10px] font-medium uppercase tracking-wide ${
+                                                cert.status === 'In View'
+                                                    ? 'bg-amber-500/10 border border-amber-500/20 text-amber-400'
+                                                    : 'bg-green-500/10 border border-green-500/20 text-green-400'
+                                            }`}>
+                                                {cert.status === 'In View' ? <Clock size={10} /> : <CheckCircle2 size={10} />}
                                                 {cert.status}
                                             </div>
                                         </div>
@@ -64,7 +68,7 @@ export default function Certifications() {
                                             {cert.name}
                                         </h4>
                                         <p className="text-sm text-gray-500 mb-6 font-mono">
-                                            Issued: <span className="text-gray-400">{cert.date}</span>
+                                            {cert.status === 'In View' ? 'Target:' : 'Issued:'} <span className="text-gray-400">{cert.date}</span>
                                         </p>
 
                                         {/* Competency Reveal on Hover */}

@@ -44,5 +44,51 @@ export const certificationGroups = [
                 verificationLink: "#"
             }
         ]
+    },
+    {
+        label: "CompTIA Pathway",
+        certifications: [
+            {
+                id: "comptia-netplus",
+                name: "CompTIA Network+",
+                issuer: "CompTIA",
+                date: "2026",
+                status: "In View",
+                competency: "Networking fundamentals, infrastructure, troubleshooting, and security concepts for enterprise environments.",
+                verificationLink: "#"
+            },
+            {
+                id: "comptia-secplus",
+                name: "CompTIA Security+",
+                issuer: "CompTIA",
+                date: "2026",
+                status: "In View",
+                competency: "Core security functions, threat management, cryptography, and risk mitigation across enterprise systems.",
+                verificationLink: "#"
+            },
+            {
+                id: "comptia-cysa",
+                name: "CompTIA CySA+",
+                issuer: "CompTIA",
+                date: "2026",
+                status: "In View",
+                competency: "Threat detection, behavioral analytics, SIEM operations, and incident response for SOC analysts.",
+                verificationLink: "#"
+            }
+        ]
+    },
+    {
+        label: "Academic Qualifications",
+        certifications: [
+            {
+                id: "msc-ai",
+                name: "MSc Artificial Intelligence",
+                issuer: "University (TBD)",
+                date: "2027",
+                status: "In View",
+                competency: "Advanced AI/ML theory, deep learning, NLP, and applied research in intelligent systems and automation.",
+                verificationLink: "#"
+            }
+        ]
     }
 ];
