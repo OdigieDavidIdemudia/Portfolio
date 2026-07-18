@@ -64,5 +64,17 @@ export const projects = [
         cta: "Explore Toolkit",
         icon: Terminal,
         links: { github: "https://github.com/OdigieDavidIdemudia/SOCTI-Toolkit", live: "#" }
+    },
+    {
+        id: "linkpass",
+        title: "LinkPass - Enterprise Vault",
+        impactStatement: "A highly secure, team-based enterprise password manager with end-to-end encryption, strict RBAC, and mandatory 2FA",
+        problemSolved: "Prevents single points of failure with multi-admin offline export authorization and comprehensive immutable audit logging",
+        outcome: "Enterprise-grade password management system with Tkinter desktop client and FastAPI backend",
+        techStack: ["Python", "FastAPI", "Tkinter", "SQLite", "Cryptography", "AES-GCM"],
+        domain: "Enterprise Security",
+        cta: "View Case Study",
+        icon: Shield,
+        links: { github: "#", live: "#" }
     }
 ];
