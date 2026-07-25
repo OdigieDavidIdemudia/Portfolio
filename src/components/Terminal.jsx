@@ -195,6 +195,24 @@ export default function Terminal() {
         return () => document.removeEventListener('click', handler);
     }, []);
 
+    // ── Auto-start music on first user interaction ────────────────────────
+    // Browsers block AudioContext until a user gesture; we start on first
+    // keydown OR click so it feels instant without a manual toggle.
+    useEffect(() => {
+        const startOnInteraction = () => {
+            if (!audioEngine.isPlaying) {
+                audioEngine.play();
+                setIsAudioPlaying(true);
+            }
+        };
+        window.addEventListener('keydown',  startOnInteraction, { once: true });
+        window.addEventListener('pointerdown', startOnInteraction, { once: true });
+        return () => {
+            window.removeEventListener('keydown',  startOnInteraction);
+            window.removeEventListener('pointerdown', startOnInteraction);
+        };
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
     // ── Command processor ─────────────────────────────────────────────────
     const processCommand = useCallback((raw) => {
         const cmd = raw.trim();
@@ -281,6 +299,13 @@ export default function Terminal() {
 
     // ── Keyboard handler ──────────────────────────────────────────────────
     const handleKeyDown = useCallback((e) => {
+        // Key-click sound on every meaningful keystroke
+        const silent = ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight',
+                        'Shift', 'Control', 'Alt', 'Meta', 'CapsLock', 'Tab'];
+        if (!silent.includes(e.key)) {
+            audioEngine.playKeyClick(e.key === 'Enter');
+        }
+
         if (e.key === 'Enter') {
             e.preventDefault();
             const val = inputVal;

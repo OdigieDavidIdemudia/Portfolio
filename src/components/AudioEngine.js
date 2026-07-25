@@ -183,6 +183,48 @@ class AudioEngine {
         if (this._playing) { this.stop(); return false; }
         else               { this.play(); return true;  }
     }
+
+    // ── Key-click synthesiser ─────────────────────────────────────────────
+    // Generates a short band-passed noise burst on every keystroke.
+    // isEnter=true produces a slightly deeper thud for the Enter key.
+    _ensureClickBuffer() {
+        if (this._clickBuffer) return;
+        const dur    = 0.06; // 60ms of white noise
+        const bufLen = Math.floor(this.ctx.sampleRate * dur);
+        this._clickBuffer = this.ctx.createBuffer(1, bufLen, this.ctx.sampleRate);
+        const data = this._clickBuffer.getChannelData(0);
+        for (let i = 0; i < bufLen; i++) data[i] = Math.random() * 2 - 1;
+    }
+
+    playKeyClick(isEnter = false) {
+        // Requires ctx to exist (init'd on first play())
+        if (!this.ctx || this.ctx.state === 'suspended') return;
+        this._ensureClickBuffer();
+
+        const t = this.ctx.currentTime;
+
+        const noise = this.ctx.createBufferSource();
+        noise.buffer = this._clickBuffer;
+
+        // Band-pass: regular keys around 2.8 kHz, Enter lower/thicker at 1.2 kHz
+        const filter = this.ctx.createBiquadFilter();
+        filter.type = 'bandpass';
+        filter.frequency.value = isEnter ? 1200 : 2800;
+        filter.Q.value = isEnter ? 0.7 : 1.1;
+
+        const gain = this.ctx.createGain();
+        const vol  = isEnter ? 0.22 : 0.14;
+        const dur  = isEnter ? 0.032 : 0.020;
+        gain.gain.setValueAtTime(vol, t);
+        gain.gain.exponentialRampToValueAtTime(0.001, t + dur);
+
+        noise.connect(filter);
+        filter.connect(gain);
+        gain.connect(this.ctx.destination); // bypass masterGain → direct, always audible
+
+        noise.start(t);
+        noise.stop(t + dur);
+    }
 }
 
 /** Module-level singleton — one engine for the whole app. */
