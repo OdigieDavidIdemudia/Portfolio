@@ -28,6 +28,7 @@ export const profile = {
 // ─── Skills ─────────────────────────────────────────────────────────────────
 export const skills = {
     security: [
+        "SOC Analysis & Monitoring",
         "SIEM & Log Analysis",
         "Network Security",
         "Threat Intelligence",

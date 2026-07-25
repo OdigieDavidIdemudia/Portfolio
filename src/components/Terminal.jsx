@@ -11,6 +11,7 @@
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { profile } from '../data/terminal';
+import { audioEngine } from './AudioEngine';
 import {
     WhoamiOutput,
     LsOutput,
@@ -102,6 +103,13 @@ export default function Terminal() {
     const [inputVal, setInputVal] = useState('');
     const [historyIdx, setHistoryIdx] = useState(-1);
     const [bootComplete, setBootComplete] = useState(false);
+    const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+
+    const handleAudioToggle = useCallback((e) => {
+        e.stopPropagation();
+        const nowPlaying = audioEngine.toggle();
+        setIsAudioPlaying(nowPlaying);
+    }, []);
 
     const historyRef   = useRef([]);
     const idRef        = useRef(0);
@@ -321,6 +329,14 @@ export default function Terminal() {
                     <span className="c-cyan">{profile.host}</span>
                     <span className="c-dim">: ~</span>
                 </span>
+                <button
+                    className={`audio-toggle ${isAudioPlaying ? 'active' : ''}`}
+                    onClick={handleAudioToggle}
+                    title={isAudioPlaying ? 'Mute ambient music' : 'Play ambient music'}
+                    aria-label={isAudioPlaying ? 'Mute ambient music' : 'Play ambient music'}
+                >
+                    {isAudioPlaying ? '♪ on' : '♪'}
+                </button>
                 <span className="titlebar-meta">ssh · 14ms</span>
             </header>
 
