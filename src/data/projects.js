@@ -39,11 +39,11 @@ export const projects = [
         domain: "Threat Intelligence",
         cta: "View Architecture",
         icon: Globe,
-        links: { github: "#", live: "#" }
+        links: { github: "#", live: "https://orange-intel.netlify.app/" }
     },
     {
-        id: "syncdeck",
-        title: "SyncDeck",
+        id: "syncglide",
+        title: "SyncGlide",
         impactStatement: "Operational task system improving team execution velocity",
         problemSolved: "Poor task visibility across distributed teams",
         outcome: "Clear ownership, reduced coordination overhead",
@@ -51,7 +51,7 @@ export const projects = [
         domain: "Productivity Systems",
         cta: "View Case Study",
         icon: LayoutDashboard,
-        links: { github: "https://github.com/OdigieDavidIdemudia/SyncDeck", live: "https://sync-deck.vercel.app/" }
+        links: { github: "https://github.com/OdigieDavidIdemudia/SyncDeck", live: "https://syncglide.com.ng" }
     },
     {
         id: "socti",
@@ -75,6 +75,18 @@ export const projects = [
         domain: "Enterprise Security",
         cta: "View Case Study",
         icon: Shield,
-        links: { github: "#", live: "#" }
+        links: { github: "#", live: "https://link-pass-site.netlify.app/" }
+    },
+    {
+        id: "assetpulse",
+        title: "AssetPulse - Endpoint Compliance Guard",
+        impactStatement: "A centralized B2B enterprise IT compliance aggregation and reconciliation platform.",
+        problemSolved: "An enterprise-grade asset inventory and compliance tracking system that merges hardware inventories with active security agent data from Cortex XDR, Qualys, and CrowdStrike to identify shadow IT and compliance drift.",
+        outcome: "Multi-Source Compliance Reconciliation, Intelligent CSV/Excel Import Wizard, Role-Based Access Control, Immutable Security Audit Logging, Cryptographic Offline Licensing.",
+        techStack: ["Python", "Flask", "React", "Vite", "PostgreSQL", "SQLite", "Docker", "Nginx", "Cryptography", "JWT", "RS256"],
+        domain: "Endpoint Compliance",
+        cta: "View Live App",
+        icon: Shield,
+        links: { github: "#", live: "https://asset-pulse-site.netlify.app/" }
     }
 ];
