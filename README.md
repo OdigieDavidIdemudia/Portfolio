@@ -1,16 +1,27 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository serves as a portfolio site that presents work, skills, and background in a polished way.
 
-Currently, two official plugins are available:
+## Purpose
+The goal is to keep the portfolio simple, maintainable, and easy to extend with new work and sections.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Recommended structure
+- `src/` — page components and app logic
+- `public/` — static assets and images
+- `styles/` — styling files
+- `docs/` — project notes and setup instructions
+- `scripts/` — automation and build tasks
 
-## React Compiler
+## Getting started
+1. Clone the repository.
+2. Install dependencies with your package manager.
+3. Copy `.env.example` into `.env` if required.
+4. Run the site locally.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Project hygiene
+- Keep assets organized and reusable.
+- Keep content and styling separated.
+- Prefer small, reusable components.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Status
+This repository has been organized with a standard baseline for maintainable frontend work.
