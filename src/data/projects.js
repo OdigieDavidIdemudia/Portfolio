@@ -1,4 +1,4 @@
-import { Shield, LayoutDashboard, Terminal, Globe, Bot, ClipboardList } from 'lucide-react';
+import { Shield, LayoutDashboard, Terminal, Globe, Bot, ClipboardList, Network, Radar, Puzzle, KeyRound, ShieldCheck } from 'lucide-react';
 
 export const projects = [
     {
@@ -74,8 +74,8 @@ export const projects = [
         techStack: ["Python", "FastAPI", "Tkinter", "SQLite", "Cryptography", "AES-GCM"],
         domain: "Enterprise Security",
         cta: "View Case Study",
-        icon: Shield,
-        links: { github: "#", live: "https://link-pass-site.netlify.app/" }
+        icon: KeyRound,
+        links: { github: "https://github.com/OdigieDavidIdemudia/LinkPass", live: "https://link-pass-site.netlify.app/" }
     },
     {
         id: "assetpulse",
@@ -86,7 +86,49 @@ export const projects = [
         techStack: ["Python", "Flask", "React", "Vite", "PostgreSQL", "SQLite", "Docker", "Nginx", "Cryptography", "JWT", "RS256"],
         domain: "Endpoint Compliance",
         cta: "View Live App",
-        icon: Shield,
-        links: { github: "#", live: "https://asset-pulse-site.netlify.app/" }
+        icon: ShieldCheck,
+        links: { github: "https://github.com/OdigieDavidIdemudia/AssetPulse", live: "https://assetpulse-seven.vercel.app" }
+    },
+    {
+        id: "mitm",
+        title: "MITM - Proxy Shield",
+        impactStatement: "Network-level ad blocking and content filtering system built around Squid proxy + SquidGuard, with a Flask management API and companion Chrome MV3 extensions for per-tab telemetry, proxy status monitoring, and DRM detection",
+        problemSolved: "Unwanted ads and trackers traverse the network with no centralized filtering, telemetry, or per-tab visibility for administrators",
+        outcome: "Live-updating blocklist management without proxy restarts, authenticated admin API, telemetry logging, and browser-extension driven domain suggestions",
+        techStack: ["Python", "Flask", "Squid", "SquidGuard", "Chrome MV3", "JavaScript", "htpasswd"],
+        domain: "Network Security",
+        cta: "View on GitHub",
+        status: "Open Source",
+        year: 2026,
+        icon: Network,
+        links: { github: "https://github.com/OdigieDavidIdemudia/MITM", live: "#" }
+    },
+    {
+        id: "agentide",
+        title: "AgentIde - EDR/XDR Assessment Framework",
+        impactStatement: "Security assessment toolkit that evaluates EDR/XDR products on endpoints — a Go agent runs assessment modules (EICAR quarantine timing, LOLBin use, anti-tamper resilience, boot-gap testing) and streams results to a central dashboard scoring findings against MITRE ATT&CK",
+        problemSolved: "Organizations lacked a repeatable, evidence-based way to measure how well their EDR/XDR stack actually detects and stops attacks",
+        outcome: "Centralized scoring of endpoint defenses with AI-assisted reports, WebSocket agent transport, and vendor fingerprinting",
+        techStack: ["Go", "Node.js", "React", "Vite", "PostgreSQL", "WebSocket", "Docker"],
+        domain: "Security Assessment",
+        cta: "View on GitHub",
+        status: "Open Source",
+        year: 2026,
+        icon: Radar,
+        links: { github: "https://github.com/OdigieDavidIdemudia/AgentIde", live: "#" }
+    },
+    {
+        id: "extsafe",
+        title: "ExtSafe - Extension Safety Auditor",
+        impactStatement: "Web platform for auditing browser extensions — scrapes extension metadata and risk signals, presents review workflows, and exports findings to Excel",
+        problemSolved: "Browser extensions are a supply-chain risk vector with no easy way to inventory, review, or report on their safety signals",
+        outcome: "Automated extension risk auditing with Excel export and a serverless FastAPI backend deployed on Vercel",
+        techStack: ["Python", "FastAPI", "React", "TypeScript", "Vite", "openpyxl", "Vercel"],
+        domain: "Browser Security",
+        cta: "View Live App",
+        status: "Live",
+        year: 2026,
+        icon: Puzzle,
+        links: { github: "https://github.com/OdigieDavidIdemudia/ExtSafe", live: "https://extsafe.vercel.app" }
     }
 ];
