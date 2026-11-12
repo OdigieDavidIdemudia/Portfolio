@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-11-12T10:02:05.254Z",
+  "synced_at": "2026-11-12T10:30:19.246Z",
   "projects": [
     {
       "id": "agentide",
@@ -9,7 +9,7 @@
       "repo": "AgentIde",
       "full_name": "OdigieDavidIdemudia/AgentIde",
       "url": "https://github.com/OdigieDavidIdemudia/AgentIde",
-      "homepage": "https://odigiedavididemudia.github.io/AgentIde/",
+      "homepage": null,
       "publication": null,
       "language": "Go",
       "topics": [],
