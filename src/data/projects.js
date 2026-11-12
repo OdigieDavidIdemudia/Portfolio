@@ -20,7 +20,7 @@ const curatedProjects = [
         status: "Live",
         year: 2025,
         icon: Bot,
-        links: { github: "https://github.com/OdigieDavidIdemudia/RoleHunter", live: "https://rolehunter.vercel.app" }
+        links: { github: "#", live: "https://rolehunter.vercel.app" }
     },
     {
         id: "dailybrief",
@@ -34,7 +34,7 @@ const curatedProjects = [
         status: "Production",
         year: 2026,
         icon: ClipboardList,
-        links: { github: "#", live: "https://daily-brief-ten-delta.vercel.app" }
+        links: { github: "https://github.com/OdigieDavidIdemudia/DailyBrief", live: "https://daily-brief-ten-delta.vercel.app" }
     },
     {
         id: "tealhunt",
@@ -48,7 +48,7 @@ const curatedProjects = [
         status: "Live",
         year: 2026,
         icon: Globe,
-        links: { github: "#", live: "https://tealhunt.com.ng" }
+        links: { github: "https://github.com/OdigieDavidIdemudia/OrangeIntel", live: "https://tealhunt.com.ng" }
     },
     {
         id: "syncglide",
@@ -60,7 +60,7 @@ const curatedProjects = [
         domain: "Productivity Systems",
         cta: "View Case Study",
         icon: LayoutDashboard,
-        links: { github: "https://github.com/OdigieDavidIdemudia/SyncDeck", live: "https://syncglide.com.ng" }
+        links: { github: "#", live: "https://syncglide.com.ng" }
     },
     {
         id: "socti",
@@ -167,29 +167,55 @@ function inferDomain(p) {
 }
 
 const curatedIds = new Set(curatedProjects.map((p) => p.id));
-const curatedRepos = new Set(
-    curatedProjects
-        .map((p) => p.links?.github?.split('/').filter(Boolean).pop())
-        .filter(Boolean)
-        .map((r) => r.toLowerCase()),
+
+const syncedById = new Map((generated.projects || []).map((p) => [p.id, p]));
+const syncedByRepo = new Map(
+    (generated.projects || []).map((p) => [String(p.repo || '').toLowerCase(), p]),
 );
+
+/**
+ * A curated entry owns how a project is presented, but it must not point the
+ * GitHub button at a private repo or the live button at the repo itself.
+ *
+ * When the sync finds a `<project>-publication` page for a curated project, it
+ * wins on links: GitHub -> the publication's repo (the only public repo), live
+ * -> the publication page. Everything else about the card stays curated.
+ */
+function applyPublicationLinks(project) {
+    const repoName = project.links?.github?.split('/').filter(Boolean).pop()?.toLowerCase();
+    const synced = syncedById.get(project.id) || (repoName && syncedByRepo.get(repoName));
+    if (!synced?.publication) return project;
+
+    return {
+        ...project,
+        links: {
+            github: synced.publication.url,
+            live: synced.publication.page,
+        },
+    };
+}
+
+const enrichedCurated = curatedProjects.map(applyPublicationLinks);
 
 const syncedProjects = (generated.projects || [])
     .filter((p) => !curatedIds.has(p.id))
-    .filter((p) => !curatedRepos.has(String(p.repo || '').toLowerCase()))
     .map((p) => ({
         id: p.id,
         title: p.name,
         impactStatement: p.description,
         problemSolved: p.description,
-        outcome: p.live ? "Published and publicly available" : "Open source",
+        outcome: p.publication
+            ? "Published with a public write-up"
+            : p.live
+                ? "Published and publicly available"
+                : "Open source",
         techStack: (p.techStack || []).slice(0, 6),
         domain: inferDomain(p),
-        cta: p.live ? "View Live App" : "View on GitHub",
+        cta: p.live ? "View Publication" : "View on GitHub",
         status: p.live ? "Live" : "Open Source",
         year: p.period ? Number(String(p.period).slice(0, 4)) || undefined : undefined,
         icon: p.live ? Globe : Puzzle,
         links: { github: p.url || "#", live: p.homepage || "#" },
     }));
 
-export const projects = [...curatedProjects, ...syncedProjects];
+export const projects = [...enrichedCurated, ...syncedProjects];

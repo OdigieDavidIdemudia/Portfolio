@@ -81,20 +81,19 @@ function normalise(repo, publication) {
     ? repo.description.trim()
     : `Public project: ${repo.name}.`;
 
-  // Live-link precedence:
-  //   1. an explicit override (including `null` to suppress it)
-  //   2. the repo's own homepage
-  //   3. a companion `<name>-publication` repo's page
-  //   4. this repo's own GitHub Pages site
+  // Link roles are deliberately separate:
+  //   github -> the public source repo (repo.html_url)
+  //   live   -> the publication page, or an explicitly configured live site
+  // A repo simply having GitHub Pages enabled is NOT enough to earn a "live"
+  // button — otherwise a Pages deployment of the tool itself masquerades as a
+  // published write-up.
   let live;
   if (ov.live !== undefined) {
     live = ov.live;
+  } else if (publication) {
+    live = (publication.homepage && publication.homepage.trim()) || pagesUrl(publication);
   } else {
     live = (repo.homepage && repo.homepage.trim()) || null;
-    if (!live && publication) {
-      live = (publication.homepage && publication.homepage.trim()) || pagesUrl(publication);
-    }
-    if (!live) live = pagesUrl(repo);
   }
 
   return {
@@ -257,6 +256,8 @@ async function main() {
       url: pub.html_url,
       page: (pub.homepage && pub.homepage.trim()) || pagesUrl(pub),
     };
+    // A publication-only project's live button is its publication page.
+    p.homepage = p.publication.page;
     p.hidden = ov.hidden === true;
     if (p.hidden) continue;
     generated.push(p);

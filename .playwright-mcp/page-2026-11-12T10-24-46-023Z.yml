@@ -1,0 +1,37 @@
+- generic [ref=e3]:
+  - banner [aria-hidden] [ref=e4]:
+    - generic [ref=e9]: "guest@d10.sec: ~"
+    - button [ref=e10] [cursor=pointer]: ♪
+    - generic [ref=e11]: ssh · 14ms
+  - main [ref=e12]:
+    - log "Terminal output" [ref=e13]:
+      - paragraph [ref=e14]: Connecting to d10.sec (203.0.113.42)...
+      - paragraph [ref=e15]: Handshake complete. Authenticating as guest...
+      - paragraph [ref=e26]: "Welcome. Last login: today from your browser."
+      - generic [ref=e27]: ██████╗ ██╗ ██████╗ ██╔══██╗ ██║ ██╔═══██╗ ██║ ██║ ██║ ██║ ██║ ██║ ██║ ██║ ██║ ██║ ██████╔╝ ██║ ╚██████╔╝ ╚═════╝ ╚═╝ ╚═════╝
+      - paragraph [ref=e28]: david idemudia odigie · security engineer · detection · automation · infrastructure
+      - paragraph [ref=e30]:
+        - generic [ref=e31]: idemudia@d10.sec:~$
+        - text: whoami
+      - generic [ref=e32]:
+        - paragraph [ref=e33]: David Idemudia Odigie
+        - paragraph [ref=e34]: Security Engineer · Detection · Automation · Infrastructure
+        - generic [ref=e35]:
+          - paragraph [ref=e36]: Cybersecurity Analyst and Software Developer bridging the gap between
+          - paragraph [ref=e37]: offensive security knowledge and defensive software engineering.
+          - paragraph [ref=e38]: Focused on SOC tooling, detection engineering, and secure systems design.
+        - generic [ref=e39]:
+          - generic [ref=e40]:
+            - generic [ref=e41]: location
+            - generic [ref=e42]: United Kingdom
+          - generic [ref=e43]:
+            - generic [ref=e44]: status
+            - generic [ref=e45]: Open to opportunities
+          - generic [ref=e46]:
+            - generic [ref=e47]: exp
+            - generic [ref=e48]: 3+ years development
+  - generic [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]: idemudia@d10.sec:~$
+      - textbox "Terminal command input — type help for a list of commands" [active] [ref=e23]
+    - paragraph [ref=e25]: ↑/↓ history · type help to list commands

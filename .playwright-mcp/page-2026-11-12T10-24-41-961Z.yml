@@ -1,0 +1,14 @@
+- generic [ref=e3]:
+  - banner [aria-hidden] [ref=e4]:
+    - generic [ref=e9]: "guest@d10.sec: ~"
+    - button [ref=e10] [cursor=pointer]: ♪
+    - generic [ref=e11]: ssh · 14ms
+  - main [ref=e12]:
+    - log "Terminal output" [ref=e13]:
+      - paragraph [ref=e14]: Connecting to d10.sec (203.0.113.42)...
+      - paragraph [ref=e15]: Handshake complete. Authenticating as guest...
+  - generic [ref=e19]:
+    - generic [ref=e20]:
+      - generic [ref=e21]: idemudia@d10.sec:~$
+      - textbox "Terminal command input — type help for a list of commands" [disabled] [ref=e23]
+    - paragraph [ref=e25]: ↑/↓ history · type help to list commands
