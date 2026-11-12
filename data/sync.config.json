@@ -20,6 +20,7 @@
     "AgentIde": {
       "name": "AgentIde",
       "cvDescription": "EDR/XDR assessment framework: a Go agent runs EICAR, LOLBin, anti-tamper and boot-gap modules and streams MITRE ATT&CK-scored results to a central dashboard.",
+      "publicationPage": "https://odigiedavididemudia.github.io/AgentIde/publication/",
       "hidden": false
     },
     "ExtSafe": {

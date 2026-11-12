@@ -81,17 +81,36 @@ function normalise(repo, publication) {
     ? repo.description.trim()
     : `Public project: ${repo.name}.`;
 
+  // A publication can live in two places:
+  //   * a companion `<name>-publication` repo (its own GitHub Pages site), or
+  //   * a `/publication/` path inside the repo's own Pages site, which is
+  //     declared explicitly via `overrides.<repo>.publicationPage` because it
+  //     cannot be discovered from the API.
+  const publicationPage = ov.publicationPage
+    || (publication
+      ? ((publication.homepage && publication.homepage.trim()) || pagesUrl(publication))
+      : null);
+
+  const publicationInfo = publicationPage
+    ? {
+        repo: publication ? publication.name : repo.name,
+        full_name: publication ? publication.full_name : repo.full_name,
+        url: publication ? publication.html_url : repo.html_url,
+        page: publicationPage,
+      }
+    : null;
+
   // Link roles are deliberately separate:
   //   github -> the public source repo (repo.html_url)
   //   live   -> the publication page, or an explicitly configured live site
-  // A repo simply having GitHub Pages enabled is NOT enough to earn a "live"
+  // A repo merely having GitHub Pages enabled is NOT enough to earn a "live"
   // button — otherwise a Pages deployment of the tool itself masquerades as a
   // published write-up.
   let live;
   if (ov.live !== undefined) {
     live = ov.live;
-  } else if (publication) {
-    live = (publication.homepage && publication.homepage.trim()) || pagesUrl(publication);
+  } else if (publicationInfo) {
+    live = publicationInfo.page;
   } else {
     live = (repo.homepage && repo.homepage.trim()) || null;
   }
@@ -108,14 +127,7 @@ function normalise(repo, publication) {
     homepage: live,
     // The publication is surfaced separately so the UI can offer "Read the
     // publication" alongside the repo, rather than only one link.
-    publication: publication
-      ? {
-          repo: publication.name,
-          full_name: publication.full_name,
-          url: publication.html_url,
-          page: (publication.homepage && publication.homepage.trim()) || pagesUrl(publication),
-        }
-      : null,
+    publication: publicationInfo,
     language: repo.language || null,
     topics,
     techStack,

@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "updated": "2026-11-12",
     "note": "Single source of truth for the CV and the portfolio. Edit here, then run `npm run cv:build`.",
-    "github_synced_at": "2026-11-12T10:30:19.246Z"
+    "github_synced_at": "2026-11-12T10:46:55.259Z"
   },
   "profile": {
     "name": "David Idemudia Odigie",
@@ -165,8 +165,13 @@
       "repo": "AgentIde",
       "full_name": "OdigieDavidIdemudia/AgentIde",
       "url": "https://github.com/OdigieDavidIdemudia/AgentIde",
-      "homepage": null,
-      "publication": null,
+      "homepage": "https://odigiedavididemudia.github.io/AgentIde/publication/",
+      "publication": {
+        "repo": "AgentIde",
+        "full_name": "OdigieDavidIdemudia/AgentIde",
+        "url": "https://github.com/OdigieDavidIdemudia/AgentIde",
+        "page": "https://odigiedavididemudia.github.io/AgentIde/publication/"
+      },
       "language": "Go",
       "topics": [],
       "techStack": [
