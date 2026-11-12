@@ -9,7 +9,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run cv:build && npm run build",
     "deploy": "gh-pages -d dist",
     "cv:sync": "node scripts/sync_github.mjs --write",
     "cv:build": "python scripts/build_cv.py --check",

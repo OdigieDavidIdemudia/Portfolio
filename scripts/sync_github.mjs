@@ -280,9 +280,23 @@ async function main() {
     return;
   }
 
-  // Replace previously generated entries, keep manual ones untouched.
+  // Only rewrite when the project list actually changed. Without this every run
+  // bumps the timestamp and produces an empty commit in CI.
+  const stable = (arr) =>
+    JSON.stringify(
+      (arr || []).map((p) => ({ ...p, hidden: undefined, stars: undefined, pushed_at: undefined, updated_at: undefined })),
+    );
+
   const manual = existing.filter((p) => (p.source || 'manual') !== 'github');
-  cv.projects = [...manual, ...generated];
+  const nextProjects = [...manual, ...generated];
+  const changed = stable(nextProjects) !== stable(existing);
+
+  if (!changed) {
+    console.log('\nNo project changes — data/cv.json left untouched.');
+    return;
+  }
+
+  cv.projects = nextProjects;
   cv.meta = cv.meta || {};
   cv.meta.github_synced_at = new Date().toISOString();
 
