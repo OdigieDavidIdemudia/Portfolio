@@ -1,0 +1,167 @@
+{
+  "synced_at": "2026-11-12T10:00:39.282Z",
+  "projects": [
+    {
+      "id": "agentide",
+      "name": "AgentIde",
+      "period": "2026 - Present",
+      "description": "EDR/XDR assessment framework: a Go agent runs EICAR, LOLBin, anti-tamper and boot-gap modules and streams MITRE ATT&CK-scored results to a central dashboard.",
+      "repo": "AgentIde",
+      "full_name": "OdigieDavidIdemudia/AgentIde",
+      "url": "https://github.com/OdigieDavidIdemudia/AgentIde",
+      "homepage": "https://odigiedavididemudia.github.io/AgentIde/",
+      "publication": null,
+      "language": "Go",
+      "topics": [],
+      "techStack": [
+        "Go"
+      ],
+      "stars": 1,
+      "pushed_at": "2026-10-20T12:31:10Z",
+      "updated_at": "2026-10-20T12:31:16Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "extsafe",
+      "name": "ExtSafe",
+      "period": "2026 - Present",
+      "description": "Browser extension safety auditor that scrapes extension metadata and risk signals, supports review workflows, and exports findings to Excel.",
+      "repo": "ExtSafe",
+      "full_name": "OdigieDavidIdemudia/ExtSafe",
+      "url": "https://github.com/OdigieDavidIdemudia/ExtSafe",
+      "homepage": "https://extsafe.vercel.app",
+      "publication": null,
+      "language": "TypeScript",
+      "topics": [],
+      "techStack": [
+        "TypeScript"
+      ],
+      "stars": 1,
+      "pushed_at": "2026-10-11T18:41:47Z",
+      "updated_at": "2026-10-11T18:41:51Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "mitm",
+      "name": "MITM Proxy Shield",
+      "period": "2026 - Present",
+      "description": "Network-level ad blocking and content filtering platform built on Squid and SquidGuard, with a Flask management API and Chrome MV3 telemetry extensions.",
+      "repo": "MITM",
+      "full_name": "OdigieDavidIdemudia/MITM",
+      "url": "https://github.com/OdigieDavidIdemudia/MITM",
+      "homepage": null,
+      "publication": null,
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 1,
+      "pushed_at": "2026-10-05T12:09:57Z",
+      "updated_at": "2026-10-05T17:02:58Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "dailybrief",
+      "name": "Daily BRIEF",
+      "period": "2026 - Present",
+      "description": "Daily operations logger with AI-assisted handover generation, multi-user access control, and PDF/CSV/XLSX export.",
+      "repo": "DailyBrief",
+      "full_name": "OdigieDavidIdemudia/DailyBrief",
+      "url": "https://github.com/OdigieDavidIdemudia/DailyBrief",
+      "homepage": "https://daily-brief-ten-delta.vercel.app",
+      "publication": null,
+      "language": "Python",
+      "topics": [],
+      "techStack": [
+        "Python"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-09-18T08:09:00Z",
+      "updated_at": "2026-09-18T08:09:04Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "pacman",
+      "name": "PACMAN",
+      "period": "2026 - Present",
+      "description": "A safe control plane for proxy auto-config (PAC) delivery.",
+      "repo": "pacman-publication",
+      "full_name": "OdigieDavidIdemudia/pacman-publication",
+      "url": "https://github.com/OdigieDavidIdemudia/pacman-publication",
+      "homepage": "https://odigiedavididemudia.github.io/pacman-publication/",
+      "publication": {
+        "repo": "pacman-publication",
+        "full_name": "OdigieDavidIdemudia/pacman-publication",
+        "url": "https://github.com/OdigieDavidIdemudia/pacman-publication",
+        "page": "https://odigiedavididemudia.github.io/pacman-publication/"
+      },
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-11-02T21:32:25Z",
+      "updated_at": "2026-11-02T21:32:30Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "linkpass",
+      "name": "LinkPass",
+      "period": "2026 - Present",
+      "description": "Team-based enterprise password manager with end-to-end encryption, RBAC and mandatory MFA.",
+      "repo": "linkpass-publication",
+      "full_name": "OdigieDavidIdemudia/linkpass-publication",
+      "url": "https://github.com/OdigieDavidIdemudia/linkpass-publication",
+      "homepage": "https://odigiedavididemudia.github.io/linkpass-publication/",
+      "publication": {
+        "repo": "linkpass-publication",
+        "full_name": "OdigieDavidIdemudia/linkpass-publication",
+        "url": "https://github.com/OdigieDavidIdemudia/linkpass-publication",
+        "page": "https://odigiedavididemudia.github.io/linkpass-publication/"
+      },
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-10-20T11:51:00Z",
+      "updated_at": "2026-10-20T11:51:04Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "assetpulse",
+      "name": "AssetPulse",
+      "period": "2026 - Present",
+      "description": "Endpoint compliance platform reconciling hardware inventory against Cortex XDR, Qualys and CrowdStrike telemetry to surface shadow IT and compliance drift.",
+      "repo": "assetpulse-publication",
+      "full_name": "OdigieDavidIdemudia/assetpulse-publication",
+      "url": "https://github.com/OdigieDavidIdemudia/assetpulse-publication",
+      "homepage": "https://odigiedavididemudia.github.io/assetpulse-publication/",
+      "publication": {
+        "repo": "assetpulse-publication",
+        "full_name": "OdigieDavidIdemudia/assetpulse-publication",
+        "url": "https://github.com/OdigieDavidIdemudia/assetpulse-publication",
+        "page": "https://odigiedavididemudia.github.io/assetpulse-publication/"
+      },
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-10-20T11:50:57Z",
+      "updated_at": "2026-10-20T11:51:01Z",
+      "hidden": false,
+      "source": "github"
+    }
+  ]
+}

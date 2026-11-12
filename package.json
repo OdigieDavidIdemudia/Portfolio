@@ -10,7 +10,10 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "cv:sync": "node scripts/sync_github.mjs --write",
+    "cv:build": "python scripts/build_cv.py --check",
+    "cv:all": "npm run cv:sync && npm run cv:build"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",

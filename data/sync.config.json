@@ -1,0 +1,105 @@
+{
+  "$comment": "Controls what the GitHub sync is allowed to put on the CV and portfolio. Repos not listed here are still synced but are hidden unless INCLUDE_UNLISTED is true.",
+  "user": "OdigieDavidIdemudia",
+  "includeUnlisted": false,
+  "exclude": [
+    "Portfolio",
+    "masterPortfolio",
+    ".github",
+    "bookmarks",
+    "BIL",
+    "faceswap-extension",
+    "User-Management",
+    "api-comparison-tool",
+    "Asset-comparator",
+    "GTCO-ADOps-Desktop",
+    "Daily Tasks",
+    "KeyGen"
+  ],
+  "overrides": {
+    "AgentIde": {
+      "name": "AgentIde",
+      "cvDescription": "EDR/XDR assessment framework: a Go agent runs EICAR, LOLBin, anti-tamper and boot-gap modules and streams MITRE ATT&CK-scored results to a central dashboard.",
+      "hidden": false
+    },
+    "ExtSafe": {
+      "name": "ExtSafe",
+      "cvDescription": "Browser extension safety auditor that scrapes extension metadata and risk signals, supports review workflows, and exports findings to Excel.",
+      "live": "https://extsafe.vercel.app",
+      "hidden": false
+    },
+    "MITM": {
+      "name": "MITM Proxy Shield",
+      "cvDescription": "Network-level ad blocking and content filtering platform built on Squid and SquidGuard, with a Flask management API and Chrome MV3 telemetry extensions.",
+      "live": null,
+      "hidden": false
+    },
+    "OrangeIntel": {
+      "name": "TealHunt",
+      "cvDescription": "Threat intelligence platform that enriches indicators against VirusTotal and AbuseIPDB and turns them into structured advisory and assessment workflows.",
+      "live": "https://tealhunt.com.ng",
+      "hidden": false
+    },
+    "DailyBrief": {
+      "name": "Daily BRIEF",
+      "cvDescription": "Daily operations logger with AI-assisted handover generation, multi-user access control, and PDF/CSV/XLSX export.",
+      "live": "https://daily-brief-ten-delta.vercel.app",
+      "hidden": false
+    },
+    "AssetPulse": {
+      "name": "AssetPulse",
+      "cvDescription": "Endpoint compliance platform reconciling hardware inventory against Cortex XDR, Qualys and CrowdStrike telemetry to surface shadow IT and compliance drift.",
+      "hidden": false
+    },
+    "LinkPass": {
+      "name": "LinkPass",
+      "cvDescription": "Team-based enterprise password manager with end-to-end encryption, RBAC and mandatory MFA.",
+      "hidden": false
+    },
+    "RoleHunter": {
+      "name": "RoleHunter",
+      "cvDescription": "AI job-hunting automation platform that scans job boards, scores listings against a CV, and sends personalised outreach.",
+      "live": "https://rolehunter.vercel.app",
+      "hidden": true
+    },
+    "SOCTI-Toolkit": {
+      "name": "SOC Toolkit",
+      "cvDescription": "Python utility for log ingestion, IOC parsing, alert triage automation, and daily SOC reporting; adopted as a core operational tool by the SOC team.",
+      "live": null,
+      "hidden": false
+    },
+    "SOCTI-Web-API": {
+      "name": "SOC Toolkit Web API",
+      "cvDescription": "Web API exposing the SOC toolkit's parsing and enrichment functions for use by other tooling.",
+      "live": null,
+      "hidden": true
+    },
+    "browser-extension-control": {
+      "name": "Browser Extension Control",
+      "cvDescription": "Reference implementation for default-deny browser extension governance on managed Chromium endpoints.",
+      "live": null,
+      "hidden": true
+    },
+    "pacman-publication": {
+      "name": "PACMAN",
+      "cvDescription": "A safe control plane for proxy auto-config (PAC) delivery.",
+      "hidden": false
+    },
+    "linkpass-publication": {
+      "name": "LinkPass Documentation",
+      "cvDescription": "Public documentation publication for LinkPass.",
+      "hidden": true
+    },
+    "assetpulse-publication": {
+      "name": "AssetPulse Documentation",
+      "cvDescription": "Public documentation publication for AssetPulse.",
+      "hidden": true
+    },
+    "SepX---separator-tool": {
+      "name": "SepX",
+      "cvDescription": "Desktop separator tool for inserting delimiters between tokens in arbitrary text.",
+      "live": null,
+      "hidden": true
+    }
+  }
+}

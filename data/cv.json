@@ -1,0 +1,364 @@
+{
+  "$schema": "./cv.schema.json",
+  "meta": {
+    "version": "1.0.0",
+    "updated": "2026-11-12",
+    "note": "Single source of truth for the CV and the portfolio. Edit here, then run `npm run cv:build`.",
+    "github_synced_at": "2026-11-12T10:00:39.282Z"
+  },
+  "profile": {
+    "name": "David Idemudia Odigie",
+    "headline": "Cybersecurity Analyst | SOC & Threat Intelligence Specialist",
+    "email": "david.odigie.ide@gmail.com",
+    "phone": [
+      "+234 901 327 4980",
+      "+234 703 723 7759"
+    ],
+    "location": "Abuja, Nigeria",
+    "links": {
+      "github": "https://github.com/OdigieDavidIdemudia",
+      "linkedin": "https://linkedin.com/in/david-odigie",
+      "portfolio": "https://odigiedavididemudia.github.io/Portfolio/"
+    }
+  },
+  "summary": "Cybersecurity Analyst and Threat Intelligence Specialist with hands-on experience in a Security Operations Centre (SOC) environment at GTCO, one of Nigeria's leading financial institutions. Manages enterprise-grade security tooling, threat hunting, policy development, and subsidiary security deployments across a multi-entity estate. Combines network security, endpoint detection, and SIEM operations experience with automation capability, building custom Python tooling and platforms that measurably reduce analyst effort. Strong Computer Science background with a focus on proactive defence, intelligence-led security, and scalable security solutions.",
+  "experience": [
+    {
+      "title": "Cybersecurity Analyst & Threat Intelligence Specialist",
+      "company": "Guaranty Trust Holding Company (GTCO)",
+      "location": "Lagos, Nigeria",
+      "start": "07/2025",
+      "end": "Present",
+      "highlights": [
+        "Operate within the Security Operations Centre (SOC), monitoring enterprise environments across parent and subsidiary entities for indicators of compromise, anomalous behaviour, and policy violations.",
+        "Develop, review, and enforce security policies, access control rules, and detection logic across QRadar SIEM, Cortex XDR, and Palo Alto NGFW.",
+        "Lead the enterprise CIMTrak File Integrity Monitoring (FIM) deployment for the parent subsidiary, scoping assets, configuring agents, defining baselines, and generating integrity reports.",
+        "Conduct proactive threat hunting using Darktrace NDR and Cortex XDR telemetry, identifying advanced threats and lateral movement before escalation.",
+        "Author threat intelligence advisories, vulnerability bulletins, and security alerts for technical and executive stakeholders; maintain threat actor and TTP tracking aligned to MITRE ATT&CK.",
+        "Plan and execute security assessments across network, endpoint, and identity layers, producing findings reports with prioritised remediation guidance.",
+        "Manage security tool deployments and integrations for subsidiaries, including Forescout NAC onboarding, Forcepoint DLP policy configuration, and CheckPoint Email Security rule management.",
+        "Administer Active Directory environments and support network administration including VLAN segmentation, firewall rule management via Palo Alto NGFW and AlgoSec, and traffic analysis using IXIA.",
+        "Built and maintain a Python-based SOC toolkit for log parsing, IOC extraction, alert triage, and operational reporting, reducing manual analyst effort.",
+        "Developed a threat intelligence platform integrating advisory management, threat hunt workflows, and logging to support the full intelligence lifecycle.",
+        "Built SyncGlide, a collaborative synchronisation dashboard, and a team task tracker used across the SOC for structured incident and task management.",
+        "Automate workflows using Python and Cortex XSOAR scripting to orchestrate playbook actions, enrich alert context, and remove repetitive SOC tasks."
+      ]
+    },
+    {
+      "title": "Head of Computer Department",
+      "company": "Christ Apostles Children Academy (NYSC)",
+      "location": "Nasarawa, Nigeria",
+      "start": "07/2024",
+      "end": "06/2025",
+      "highlights": [
+        "Designed and implemented a structured ICT curriculum aligned with national education standards and industry best practice.",
+        "Mentored students in programming fundamentals, web development, and digital literacy.",
+        "Collaborated with school leadership and external partners to integrate emerging technologies into classroom learning."
+      ]
+    },
+    {
+      "title": "Software Development Intern",
+      "company": "BrandOne Technologies Limited",
+      "location": "Abuja, Nigeria",
+      "start": "02/2022",
+      "end": "10/2022",
+      "highlights": [
+        "Assisted senior developers in the design and development of software applications across the full development lifecycle.",
+        "Applied version control best practice using Git and GitHub for collaborative project management.",
+        "Contributed to graphic design and multimedia editing initiatives, broadening cross-functional skills."
+      ]
+    }
+  ],
+  "skills": {
+    "Security Platforms": [
+      "QRadar SIEM",
+      "Cortex XDR",
+      "Palo Alto NGFW",
+      "Darktrace NDR",
+      "Forescout NAC",
+      "CIMTrak FIM",
+      "AlgoSec",
+      "Forcepoint DLP",
+      "CheckPoint Email Security",
+      "IXIA"
+    ],
+    "Security Disciplines": [
+      "SOC Operations",
+      "Threat Intelligence",
+      "Threat Hunting",
+      "File Integrity Monitoring",
+      "Vulnerability Assessment",
+      "Policy Development",
+      "Incident Response",
+      "Security Advisory Writing"
+    ],
+    "Networking & Infrastructure": [
+      "TCP/IP",
+      "Firewall Rule Management",
+      "VLAN Segmentation",
+      "Active Directory",
+      "Systems Administration",
+      "Network Access Control",
+      "Network Traffic Analysis"
+    ],
+    "Scripting & Automation": [
+      "Python",
+      "Cortex XSOAR",
+      "Bash",
+      "REST APIs",
+      "Log Parsing",
+      "SOAR Playbooks"
+    ],
+    "Frameworks & Standards": [
+      "MITRE ATT&CK",
+      "ISO 27001 (awareness)",
+      "NIST CSF (awareness)"
+    ],
+    "Development": [
+      "HTML5",
+      "CSS3",
+      "JavaScript",
+      "PHP",
+      "C#",
+      "ASP.NET",
+      "Git",
+      "GitHub",
+      "SQL"
+    ]
+  },
+  "projects": [
+    {
+      "id": "socti",
+      "name": "SOC Toolkit",
+      "period": "2025 - Present",
+      "description": "Python-based internal utility covering log ingestion, IOC parsing, alert triage automation, and daily SOC reporting. Adopted as a core operational tool by the SOC team.",
+      "repo": "SOCTI-Toolkit",
+      "source": "manual"
+    },
+    {
+      "id": "tealhunt",
+      "name": "TealHunt",
+      "period": "2025 - Present",
+      "description": "Threat intelligence platform supporting advisory creation, hunt hypothesis tracking, intelligence logging, and analyst knowledge-base management.",
+      "repo": "OrangeIntel",
+      "source": "manual"
+    },
+    {
+      "id": "syncglide",
+      "name": "SyncGlide",
+      "period": "2025 - Present",
+      "description": "Collaborative team dashboard enabling synchronised task visibility, status tracking, and cross-analyst coordination within a SOC environment.",
+      "source": "manual"
+    },
+    {
+      "id": "ims",
+      "name": "Information Management System",
+      "period": "08/2023 - 01/2024",
+      "description": "Final-year thesis project: PHP and SQL information management system with a normalised database architecture and advanced search, improving retrieval accuracy.",
+      "source": "manual"
+    },
+    {
+      "id": "agentide",
+      "name": "AgentIde",
+      "period": "2026 - Present",
+      "description": "EDR/XDR assessment framework: a Go agent runs EICAR, LOLBin, anti-tamper and boot-gap modules and streams MITRE ATT&CK-scored results to a central dashboard.",
+      "repo": "AgentIde",
+      "full_name": "OdigieDavidIdemudia/AgentIde",
+      "url": "https://github.com/OdigieDavidIdemudia/AgentIde",
+      "homepage": "https://odigiedavididemudia.github.io/AgentIde/",
+      "publication": null,
+      "language": "Go",
+      "topics": [],
+      "techStack": [
+        "Go"
+      ],
+      "stars": 1,
+      "pushed_at": "2026-10-20T12:31:10Z",
+      "updated_at": "2026-10-20T12:31:16Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "extsafe",
+      "name": "ExtSafe",
+      "period": "2026 - Present",
+      "description": "Browser extension safety auditor that scrapes extension metadata and risk signals, supports review workflows, and exports findings to Excel.",
+      "repo": "ExtSafe",
+      "full_name": "OdigieDavidIdemudia/ExtSafe",
+      "url": "https://github.com/OdigieDavidIdemudia/ExtSafe",
+      "homepage": "https://extsafe.vercel.app",
+      "publication": null,
+      "language": "TypeScript",
+      "topics": [],
+      "techStack": [
+        "TypeScript"
+      ],
+      "stars": 1,
+      "pushed_at": "2026-10-11T18:41:47Z",
+      "updated_at": "2026-10-11T18:41:51Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "mitm",
+      "name": "MITM Proxy Shield",
+      "period": "2026 - Present",
+      "description": "Network-level ad blocking and content filtering platform built on Squid and SquidGuard, with a Flask management API and Chrome MV3 telemetry extensions.",
+      "repo": "MITM",
+      "full_name": "OdigieDavidIdemudia/MITM",
+      "url": "https://github.com/OdigieDavidIdemudia/MITM",
+      "homepage": null,
+      "publication": null,
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 1,
+      "pushed_at": "2026-10-05T12:09:57Z",
+      "updated_at": "2026-10-05T17:02:58Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "dailybrief",
+      "name": "Daily BRIEF",
+      "period": "2026 - Present",
+      "description": "Daily operations logger with AI-assisted handover generation, multi-user access control, and PDF/CSV/XLSX export.",
+      "repo": "DailyBrief",
+      "full_name": "OdigieDavidIdemudia/DailyBrief",
+      "url": "https://github.com/OdigieDavidIdemudia/DailyBrief",
+      "homepage": "https://daily-brief-ten-delta.vercel.app",
+      "publication": null,
+      "language": "Python",
+      "topics": [],
+      "techStack": [
+        "Python"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-09-18T08:09:00Z",
+      "updated_at": "2026-09-18T08:09:04Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "pacman",
+      "name": "PACMAN",
+      "period": "2026 - Present",
+      "description": "A safe control plane for proxy auto-config (PAC) delivery.",
+      "repo": "pacman-publication",
+      "full_name": "OdigieDavidIdemudia/pacman-publication",
+      "url": "https://github.com/OdigieDavidIdemudia/pacman-publication",
+      "homepage": "https://odigiedavididemudia.github.io/pacman-publication/",
+      "publication": {
+        "repo": "pacman-publication",
+        "full_name": "OdigieDavidIdemudia/pacman-publication",
+        "url": "https://github.com/OdigieDavidIdemudia/pacman-publication",
+        "page": "https://odigiedavididemudia.github.io/pacman-publication/"
+      },
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-11-02T21:32:25Z",
+      "updated_at": "2026-11-02T21:32:30Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "linkpass",
+      "name": "LinkPass",
+      "period": "2026 - Present",
+      "description": "Team-based enterprise password manager with end-to-end encryption, RBAC and mandatory MFA.",
+      "repo": "linkpass-publication",
+      "full_name": "OdigieDavidIdemudia/linkpass-publication",
+      "url": "https://github.com/OdigieDavidIdemudia/linkpass-publication",
+      "homepage": "https://odigiedavididemudia.github.io/linkpass-publication/",
+      "publication": {
+        "repo": "linkpass-publication",
+        "full_name": "OdigieDavidIdemudia/linkpass-publication",
+        "url": "https://github.com/OdigieDavidIdemudia/linkpass-publication",
+        "page": "https://odigiedavididemudia.github.io/linkpass-publication/"
+      },
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-10-20T11:51:00Z",
+      "updated_at": "2026-10-20T11:51:04Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "assetpulse",
+      "name": "AssetPulse",
+      "period": "2026 - Present",
+      "description": "Endpoint compliance platform reconciling hardware inventory against Cortex XDR, Qualys and CrowdStrike telemetry to surface shadow IT and compliance drift.",
+      "repo": "assetpulse-publication",
+      "full_name": "OdigieDavidIdemudia/assetpulse-publication",
+      "url": "https://github.com/OdigieDavidIdemudia/assetpulse-publication",
+      "homepage": "https://odigiedavididemudia.github.io/assetpulse-publication/",
+      "publication": {
+        "repo": "assetpulse-publication",
+        "full_name": "OdigieDavidIdemudia/assetpulse-publication",
+        "url": "https://github.com/OdigieDavidIdemudia/assetpulse-publication",
+        "page": "https://odigiedavididemudia.github.io/assetpulse-publication/"
+      },
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-10-20T11:50:57Z",
+      "updated_at": "2026-10-20T11:51:01Z",
+      "hidden": false,
+      "source": "github"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science - Computer Science",
+      "institution": "Nasarawa State University, Keffi",
+      "location": "Nasarawa, Nigeria",
+      "start": "2018",
+      "end": "2024",
+      "grade": "Second Class Upper (2:1)"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Certified in Cybersecurity (CC)",
+      "issuer": "ISC2",
+      "date": "2026",
+      "status": "Active"
+    },
+    {
+      "name": "Fortinet NSE 1 - Network Security Associate",
+      "issuer": "Fortinet",
+      "date": "2025",
+      "status": "Validated"
+    },
+    {
+      "name": "Fortinet NSE 2 - Network Security Associate",
+      "issuer": "Fortinet",
+      "date": "2026",
+      "status": "Validated"
+    },
+    {
+      "name": "Fortinet NSE 3 - Network Security Associate",
+      "issuer": "Fortinet",
+      "date": "2026",
+      "status": "Validated"
+    }
+  ],
+  "development": [
+    "Ethical Hacking & Vulnerability Assessment",
+    "Artificial Intelligence Principles & Techniques",
+    "Business Administration and Management (MBA)"
+  ]
+}

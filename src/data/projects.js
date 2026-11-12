@@ -1,6 +1,13 @@
 import { Shield, LayoutDashboard, Terminal, Globe, Bot, ClipboardList, Network, Radar, Puzzle, KeyRound, ShieldCheck } from 'lucide-react';
+import generated from './generated-projects.json';
 
-export const projects = [
+/**
+ * Curated presentation entries. These are hand-written and are NOT overwritten
+ * by the GitHub sync — the sync only appends projects that are not already
+ * represented here. Content (descriptions, dates) is owned by data/cv.json;
+ * this array owns how a project is *presented* on the site.
+ */
+const curatedProjects = [
     {
         id: "rolehunter",
         title: "RoleHunter",
@@ -30,16 +37,18 @@ export const projects = [
         links: { github: "#", live: "https://daily-brief-ten-delta.vercel.app" }
     },
     {
-        id: "orangeintel",
-        title: "OrangeIntel",
-        impactStatement: "Threat intelligence platform for real-time adversary monitoring and analysis",
-        problemSolved: "Fragmented threat feeds and slow analyst triage",
-        outcome: "Centralized threat visibility and faster response workflows",
-        techStack: ["React", "Go"],
+        id: "tealhunt",
+        title: "TealHunt",
+        impactStatement: "Threat intelligence platform that turns raw indicators into structured advisory and assessment workflows, enriching IOCs against VirusTotal and AbuseIPDB with a Three.js globe visualising adversary relationships",
+        problemSolved: "Fragmented threat feeds and slow analyst triage — indicators had to be enriched and written up by hand across multiple tools",
+        outcome: "Centralized threat visibility with IOC enrichment, reusable advisory templates, and interactive adversary mapping",
+        techStack: ["Next.js", "Three.js", "React", "VirusTotal API", "AbuseIPDB", "JavaScript"],
         domain: "Threat Intelligence",
-        cta: "View Architecture",
+        cta: "View Live App",
+        status: "Live",
+        year: 2026,
         icon: Globe,
-        links: { github: "#", live: "https://orange-intel.netlify.app/" }
+        links: { github: "#", live: "https://tealhunt.com.ng" }
     },
     {
         id: "syncglide",
@@ -132,3 +141,55 @@ export const projects = [
         links: { github: "https://github.com/OdigieDavidIdemudia/ExtSafe", live: "https://extsafe.vercel.app" }
     }
 ];
+
+// ─── GitHub-synced projects ──────────────────────────────────────────────────
+// Appended from src/data/generated-projects.json, which scripts/sync_github.mjs
+// rewrites from data/cv.json. A project already represented above (by id or by
+// repo name) is skipped so curated copy always wins.
+
+const DOMAIN_BY_TOPIC = [
+    [/threat|intel|ioc|siem|soc/i, "Threat Intelligence"],
+    [/security|edr|xdr|malware|red.?team|offensive/i, "Security Tooling"],
+    [/network|proxy|firewall|dns|squid/i, "Network Security"],
+    [/compliance|audit|asset|inventory/i, "Compliance"],
+    [/cli|shell|terminal|tool/i, "Developer Tooling"],
+    [/web|react|next|frontend|api/i, "Web Platform"],
+];
+
+function inferDomain(p) {
+    const haystack = [p.name, p.description, p.language, ...(p.topics || [])]
+        .filter(Boolean)
+        .join(' ');
+    for (const [re, label] of DOMAIN_BY_TOPIC) {
+        if (re.test(haystack)) return label;
+    }
+    return "Open Source";
+}
+
+const curatedIds = new Set(curatedProjects.map((p) => p.id));
+const curatedRepos = new Set(
+    curatedProjects
+        .map((p) => p.links?.github?.split('/').filter(Boolean).pop())
+        .filter(Boolean)
+        .map((r) => r.toLowerCase()),
+);
+
+const syncedProjects = (generated.projects || [])
+    .filter((p) => !curatedIds.has(p.id))
+    .filter((p) => !curatedRepos.has(String(p.repo || '').toLowerCase()))
+    .map((p) => ({
+        id: p.id,
+        title: p.name,
+        impactStatement: p.description,
+        problemSolved: p.description,
+        outcome: p.live ? "Published and publicly available" : "Open source",
+        techStack: (p.techStack || []).slice(0, 6),
+        domain: inferDomain(p),
+        cta: p.live ? "View Live App" : "View on GitHub",
+        status: p.live ? "Live" : "Open Source",
+        year: p.period ? Number(String(p.period).slice(0, 4)) || undefined : undefined,
+        icon: p.live ? Globe : Puzzle,
+        links: { github: p.url || "#", live: p.homepage || "#" },
+    }));
+
+export const projects = [...curatedProjects, ...syncedProjects];
