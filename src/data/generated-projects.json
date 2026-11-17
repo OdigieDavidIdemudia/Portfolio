@@ -1,5 +1,5 @@
 {
-  "synced_at": "2026-11-12T10:46:55.259Z",
+  "synced_at": "2026-11-17T15:22:17.411Z",
   "projects": [
     {
       "id": "agentide",
@@ -87,6 +87,32 @@
       "stars": 0,
       "pushed_at": "2026-09-18T08:09:00Z",
       "updated_at": "2026-09-18T08:09:04Z",
+      "hidden": false,
+      "source": "github"
+    },
+    {
+      "id": "hermes",
+      "name": "Hermes",
+      "period": "2026 - Present",
+      "description": "HERMES publication: harmonising NASA MODIS and VIIRS into one defensible fire record",
+      "repo": "hermes-publication",
+      "full_name": "OdigieDavidIdemudia/hermes-publication",
+      "url": "https://github.com/OdigieDavidIdemudia/hermes-publication",
+      "homepage": "https://odigiedavididemudia.github.io/hermes-publication/",
+      "publication": {
+        "repo": "hermes-publication",
+        "full_name": "OdigieDavidIdemudia/hermes-publication",
+        "url": "https://github.com/OdigieDavidIdemudia/hermes-publication",
+        "page": "https://odigiedavididemudia.github.io/hermes-publication/"
+      },
+      "language": "HTML",
+      "topics": [],
+      "techStack": [
+        "HTML"
+      ],
+      "stars": 0,
+      "pushed_at": "2026-11-17T12:23:59Z",
+      "updated_at": "2026-11-17T12:18:12Z",
       "hidden": false,
       "source": "github"
     },
